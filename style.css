@@ -30,6 +30,7 @@ main {
 }
 
 #bio {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,4 +38,5 @@ main {
 
 #bio-text {
     width: 90%;
+    margin: 0 auto;
 }
