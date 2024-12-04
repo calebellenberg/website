@@ -30,6 +30,11 @@ main {
 }
 
 #bio {
-    padding-left: 30;
-    padding-right: 30;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#bio-text {
+    width: 90%;
 }
