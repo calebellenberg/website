@@ -28,3 +28,8 @@ main {
 #headshot {
     width: 200;
 }
+
+#bio {
+    padding-left: 5%;
+    padding-right: 5%;
+}
