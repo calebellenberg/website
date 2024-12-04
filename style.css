@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 100vw;
+}
+
+main {
+    width: 100%;
+}
+
+.title {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+#headshot-container {
+    text-align: center;
+    width: 100%;
+}
+
+#headshot {
+    width: 200;
+}
