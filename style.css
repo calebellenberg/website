@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     width: 100vw;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 main {
@@ -39,4 +40,71 @@ main {
 #bio-text {
     width: 90%;
     margin: 0 auto;
+    text-align: justify;
+}
+
+.text-link {
+    color: #708ef1;
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #242424;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-bar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b1c1f8;
+}
+
+.content {
+    padding: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+}
+
+/* Styles for narrow phone screens */
+@media (max-width: 600px) {
+    .top-bar {
+        padding: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1.1em; /* Slightly larger links for better tap targets */
+    }
+
+    #bio-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links a {
+        margin: 5px 6;
+    }
 }

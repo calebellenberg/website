@@ -1,0 +1,11 @@
+#bio-text {
+    text-align: center;
+}
+
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Same width as the embed element */
+    height: 75%; /* Same height as the embed element */
+}
