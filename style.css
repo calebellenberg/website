@@ -30,6 +30,19 @@ main {
     width: 200;
 }
 
+.link-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.link-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
 #bio {
     margin-top: 20px;
     display: flex;
