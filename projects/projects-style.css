@@ -25,7 +25,7 @@
     width: 100%; /* Full width image */
     height: auto; /* Maintain aspect ratio */
     display: block;
-    margin-bottom: 8px; /* Small gap after the image */
+    margin-bottom: 8px; /* Small gap after the image*/
 }
 
 .projects-container a {
