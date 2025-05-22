@@ -1,3 +1,73 @@
 #bio-text {
     text-align: center;
 }
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px; /* Adjust gap as needed */
+    justify-content: center;
+    padding: 24px; /* Add padding around the container */
+}
+
+.project-card {
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project-card img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 8px; /* Small gap after the image */
+}
+
+.projects-container a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card .content {
+    padding: 0 16px; /* Padding on the sides only */
+    text-align: center; /* Center align text */
+}
+
+.project-card h4 {
+    margin: 4px 0; /* Margin for the title */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+.project-card p {
+    font-size: 0.9em; /* Smaller font size for description */
+    color: #414141; /* Slightly darker text for description */
+}
+
+@media (prefers-color-scheme: dark) {
+    .project-card {
+        background-color: #282828; /* Dark background for dark mode */
+        color: #fff; /* White text for dark mode */
+    }
+
+    .project-card p {
+        color: #e2e2e2; /* Lighter text for description in dark mode */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .project-card {
+        border-radius: 6px; /* Slightly smaller rounded corners */
+    }
+}

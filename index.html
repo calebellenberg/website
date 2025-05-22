@@ -53,8 +53,17 @@
             <div class="link-box">
                 <a href="https://github.com/calebellenberg" target="_blank">
                     <img src="images/github.png" class="link-icon"
-                        alt="GitHub Logo">
+                        alt="GitHub Logo" id="github-icon">
                 </a>
+                <script>
+                    const githubIcon = document.getElementById('github-icon');
+                    const updateGithubIcon = () => {
+                        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                        githubIcon.src = prefersDarkMode ? 'images/githubDarkMode.png' : 'images/github.png';
+                    };
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateGithubIcon);
+                    updateGithubIcon();
+                </script>
                 <a href="https://www.browndailyherald.com/staff/caleb-ellenberg" target="_blank">
                     <img src="images/bdh.png" class="link-icon"
                         alt="Brown Daily Herald Logo">
