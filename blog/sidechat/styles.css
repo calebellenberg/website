@@ -1,0 +1,538 @@
+:root {
+  --page-bg: #fceefe;
+  --gut-l: 72px;
+  --gut-r: 32px;
+}
+
+html,
+body {
+  overscroll-behavior-x: none;
+}
+
+body {
+  font-family: "Source Serif 4", "Georgia", "Times", serif;
+  margin: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #ec93f829;
+  color: #000;
+}
+
+.data-box {
+  position: relative;
+  max-width: 940px;
+  width: 80%;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  font-family: "Source Serif 4", "Georgia", "Times", serif;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  color: rgb(12, 12, 12);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.04);
+}
+
+.data-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.data-box h4 {
+  margin: 0 0 0.15em;
+  font-size: 1.35em;
+  line-height: 1.2;
+  color: #ed93f8;
+}
+
+#intro {
+  scroll-margin-top: 8vh;
+}
+
+#heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+a {
+  color: #ed93f8;
+}
+
+#pink-data {
+  color: white;
+  animation: fadeToPink 2s forwards;
+}
+
+@keyframes fadeToPink {
+  to {
+    color: #ed93f8;
+  }
+}
+
+.down-arrow {
+  display: block;
+  text-align: center;
+  animation: bounce 2s infinite;
+  margin-top: 3.9rem;
+}
+
+.down-arrow img {
+  height: 44px;
+  width: auto;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    --avatar-col: 38px;
+    --avatar-gap: 14px;
+    width: 82vw;
+    font-size: 15px;
+    padding: 20px;
+    padding-left: var(--avatar-gap);
+  }
+
+  .data-box {
+    max-width: 90%;
+    padding: 1em;
+  }
+}
+
+.post {
+  --avatar-col: 33px;
+  --avatar-gap: 13px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  padding-left: var(--avatar-gap);
+  width: 500px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.hero {
+  --avatar-col: 46px;
+  --avatar-gap: 17px;
+  box-sizing: border-box;
+  width: min(720px, 90vw);
+  font-size: 21px;
+  padding: 25px;
+  padding-left: var(--avatar-gap);
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.hero .avatar {
+  background-image: url("images/CalebIcon.png");
+}
+
+.hero .author-link {
+  display: flex;
+  align-items: center;
+  gap: var(--avatar-gap);
+  color: inherit;
+  text-decoration: none;
+  padding: 5px 8px;
+  margin: -5px -8px;
+}
+
+.hero h3 {
+  margin: 0 0 0.3em;
+  font-size: 1.85em;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--avatar-gap);
+  margin-bottom: 6px;
+}
+
+.avatar {
+  width: var(--avatar-col);
+  height: var(--avatar-col);
+  flex: none;
+  background-image: url("images/BrownIcon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20%;
+  display: inline-block;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  color: #aaa;
+  font-size: 0.85em;
+}
+
+.content {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.content,
+.actions {
+  margin-left: calc(var(--avatar-col) + var(--avatar-gap));
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actions .upvote {
+  margin-left: auto;
+  color: #ed93f8;
+  font-weight: 600;
+}
+
+.icon {
+  height: 1.4em;
+  width: auto;
+  vertical-align: text-bottom;
+}
+
+.upvote {
+  display: inline-flex;
+  align-items: center;
+  gap: 2em;
+}
+
+#daily-upvotes-wrap {
+  position: relative;
+  z-index: 5;
+  margin-top: 8vh;
+}
+
+#daily-upvotes-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  contain: layout paint;
+}
+
+#daily-upvotes-chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+#daily-track {
+  position: absolute;
+  left: var(--gut-l);
+  right: var(--gut-r);
+  transform-origin: left center;
+}
+
+#daily-labels {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.daily-bar {
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+  background: #ed93f8;
+  opacity: 0.6;
+}
+
+.daily-bar.is-active {
+  opacity: 1;
+  background: #94102a;
+}
+
+#daily-upvotes-chart.has-active .daily-bar:not(.is-active) {
+  opacity: 0.3;
+}
+
+.daily-year,
+.daily-month {
+  position: absolute;
+  left: 0;
+  width: calc(var(--gut-l) - 12px);
+  line-height: 1;
+  transform: translateY(-50%);
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.daily-year {
+  font-size: 0.78rem;
+  font-weight: bold;
+  color: #383838;
+}
+
+.daily-month {
+  font-size: 0.68rem;
+  color: #877e8a;
+}
+
+.daily-yearline {
+  position: absolute;
+  left: var(--gut-l);
+  right: var(--gut-r);
+  height: 1px;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+#daily-axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--gut-l);
+  right: var(--gut-r);
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wa-head {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--gut-l));
+  right: calc(-1 * var(--gut-r));
+  height: 54px;
+  background: var(--page-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.wa-head::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: linear-gradient(to bottom, var(--page-bg), rgba(252, 238, 254, 0));
+}
+
+.wa-head span {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #6b6b6b;
+}
+
+.wa-tick {
+  position: absolute;
+  top: 54px;
+  bottom: 0;
+  left: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.wa-tick::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -8px;
+  width: 1px;
+  height: 8px;
+  background: #999;
+}
+
+.wa-tick b {
+  position: absolute;
+  top: -25px;
+  left: 5px;
+  font-size: 0.7rem;
+  font-weight: normal;
+  color: #5c5c5c;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.wa-tick.wa-mute b {
+  display: none;
+}
+
+#daily-notes {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.note-card,
+.day-note .post {
+  pointer-events: auto;
+}
+
+.day-note {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: min(575px, calc(100vw - 48px));
+  margin: 0 auto;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11vh;
+}
+
+.day-note.is-on {
+  visibility: visible;
+  will-change: transform;
+}
+
+.note-card {
+  width: min(425px, 100%);
+  padding: 1.4em 1.6em;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+}
+
+.day-note .post {
+  flex: none;
+  max-width: 100%;
+}
+
+.note-card p {
+  margin: 0;
+  font-size: 1.1875rem;
+  line-height: 1.45;
+}
+
+#daily-upvotes-wrap.is-flat #daily-upvotes-stage {
+  position: static;
+  height: auto;
+  overflow: visible;
+}
+
+#daily-upvotes-wrap.is-flat #daily-upvotes-chart {
+  position: relative;
+  transform: none !important;
+}
+
+#daily-upvotes-wrap.is-flat .daily-bar {
+  opacity: 0.6 !important;
+  background: #ed93f8;
+}
+
+#daily-upvotes-wrap.is-flat #daily-notes {
+  position: static;
+}
+
+#daily-upvotes-wrap.is-flat .day-note {
+  position: static;
+  visibility: visible;
+  transform: none !important;
+  gap: 1.5em;
+  margin: 2.5em auto;
+}
+
+#daily-tip {
+  position: fixed;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
+  padding: 0.45em 0.65em;
+  border-radius: 4px;
+  background: rgba(20, 20, 20, 0.92);
+  color: #fff;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+#daily-tip.is-on {
+  display: block;
+}
+
+#daily-tip b {
+  color: #ed93f8;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gut-l: 52px;
+    --gut-r: 12px;
+  }
+
+  .daily-year,
+  .daily-month {
+    font-size: 0.6rem;
+  }
+
+  .daily-year {
+    font-size: 0.65rem;
+  }
+
+  .wa-head span,
+  .wa-tick b {
+    font-size: 0.62rem;
+  }
+
+  .day-note {
+    width: calc(100vw - 76px);
+  }
+
+  .note-card {
+    padding: 1.1em 1.2em;
+  }
+
+  .note-card p {
+    font-size: 1rem;
+  }
+
+  .day-note {
+    gap: 9vh;
+  }
+}

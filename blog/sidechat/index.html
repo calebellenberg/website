@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The world of Sidechat</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+            rel="stylesheet">
+        <link rel="icon" href="images/icon.png" sizes="96x96">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div style="height: 100vh;"></div>
+
+        <div id="heading">
+            <div class="post hero">
+                <div class="header">
+                    <a class="author-link" href="https://calebellenberg.com"
+                        target="_blank">
+                        <span class="avatar"></span>
+                        <span class="username">Caleb Ellenberg</span>
+                    </a>
+                    <div class="time">September 8th</div>
+                </div>
+                <div class="content">
+                    <h3>The world of <span id="pink-data">Sidechat</span></h3>
+                    <p>A look at the anonymous posts fueling
+                        gossip and gripes at Brown.</p>
+                </div>
+                <div class="actions">
+                    <div class="comments">
+                        <img src="images/comment.svg" alt="comments"
+                            class="icon" />
+                        <span>?</span>
+                    </div>
+                    <div class="upvote">
+                        <img src="images/upvote.svg" alt="upvote"
+                            class="icon" />
+                        <span class="upvotes">?</span>
+                        <img src="images/downvote.svg" alt="downvote"
+                            class="icon" />
+                    </div>
+                </div>
+            </div>
+            <a class="down-arrow" href="#intro"
+                aria-label="Scroll to the introduction">
+                <img src="images/DownArrow.png" alt />
+            </a>
+        </div>
+
+        <div class="data-box" id="intro" style="text-align: left;">
+            This project analyzes Brown’s Sidechat (233,027 anonymous posts from
+            mid-March 2022 to August 2026). Anyone with a Brown email can join
+            Sidechat, but the majority <a
+                href="https://www.browndailyherald.com/article/2024/10/relationships-legacy-admissions-and-the-2024-election-the-heralds-fall-poll"
+                target="_blank">are likely undergrads</a>. The bars below
+            show the total number of upvotes each day. Those bars and the
+            accompanying posts give you a glimpse into life as a Brown student
+            over the past four and a half years.
+        </div>
+
+        <div style="height:10vh"></div>
+
+        <div id="daily-upvotes-wrap" aria-label="Daily upvotes over time">
+            <div id="daily-upvotes-stage">
+                <div id="daily-axis">
+                    <div class="wa-head"><span>upvotes per day</span></div>
+                </div>
+                <div id="daily-upvotes-chart"></div>
+
+                <div id="daily-notes">
+                    <div class="day-note" data-day="2022-03-15">
+                        <div class="note-card">
+                            <p>Sidechat launched at Brown on March 15th, 2022
+                                and collected 10,190 upvotes in
+                                its first day on campus. A Bio 200 midterm
+                                inspired the first recorded post.</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="10:43 AM"
+                            data-upvotes="15" data-comments="3">
+                            Who else is about to fail the next bio 200 exam? 😖
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-03-22">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:44 PM"
+                            data-upvotes="815" data-comments="12">
+                            Every time a freshman switches out of premed a
+                            cannon should go off like in hunger games
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-04-12">
+                        <div class="note-card">
+                            <p>Housing selection always causes a stir,
+                                and the 2022 process was <a
+                                    href="https://www.browndailyherald.com/article/2022/04/students-reslife-staff-reflect-on-housing-process"
+                                    target="_blank">particularly
+                                    controversial</a>.</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:56 PM"
+                            data-upvotes="870" data-comments="8">
+                            Reslife regretting taking math s/nc rn
+                        </div>
+                    </div>
+                    <div class="day-note" data-day="2022-05-01">
+                        <div class="note-card">
+                            <p>Sidechat is a place for humor:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:49 PM"
+                            data-upvotes="579" data-comments="4">
+                            Please remember condoms are not 100% safe. My friend
+                            was wearing one and still got hit by the brown
+                            shuttle
+                        </div>
+                    </div>
+                    <div class="day-note" data-day="2022-05-12">
+                        <div class="note-card">
+                            <p>For supporting classmates:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:18 PM"
+                            data-upvotes="1.2K" data-comments="57">
+                            nowhere else to post this, as of 1 hr ago my mom is
+                            cancer free!!
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-05-13">
+                        <div class="note-card">
+                            <p>And of course, for venting:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:10 AM"
+                            data-upvotes="280" data-comments="0">
+                            i’m so tired please just give me an A
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-09-20">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:32 PM"
+                            data-upvotes="261" data-comments="2">
+                            Oh no! I missed my 9 AM tomorrow.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-10-06">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:46 PM"
+                            data-upvotes="541" data-comments="4">
+                            freshmen failing their math classes but asking
+                            “where the parties at” bro u worried about the wrong
+                            functions
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2022-12-12">
+                        <div class="note-card">
+                            <p>The <a
+                                    href="https://www.browndailyherald.com/article/2022/10/its-so-brown-nudity-controversy-body-positivity-on-campus"
+                                    target="_blank">Naked Donut Run</a> usually
+                                causes a stir:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:37 PM"
+                            data-upvotes="435" data-comments="1">
+                            the only time Brown shows school spirit is for naked
+                            people and weed
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-03-14">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:36 PM"
+                            data-upvotes="470" data-comments="0">
+                            The first five days after the weekend are always the
+                            hardest. Hang in there 🫶
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-04-30">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:31 PM"
+                            data-upvotes="694" data-comments="2">
+                            Banger Day of SW brought to you by: - Remi “do your
+                            taxes” Wolf - 070 “security let them be” Shake -
+                            Ethel “does she need water” Cain
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-05-13">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="5:36 PM"
+                            data-upvotes="724" data-comments="12">
+                            We’ve reached the weird part of finals where half of
+                            campus is finished and frolicking outside while half
+                            of us are in the deepest darkest pits of academic
+                            despair
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-09-23">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="9:56 AM"
+                            data-upvotes="552" data-comments="1">
+                            The point difference between Harvard and Brown games
+                            keeps getting smaller every year. We might actually
+                            win next year
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-09-27">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:39 PM"
+                            data-upvotes="702" data-comments="4">
+                            True networking is knowing someone at the front of
+                            the Andrews line
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-10-02">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:45 PM"
+                            data-upvotes="971" data-comments="7">
+                            andrew’s is bad good pizza the ratty is good bad
+                            pizza
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-11-15">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="10:13 AM"
+                            data-upvotes="1.4K" data-comments="15">
+                            Shoutout to everyone who crosses roads diagonally to
+                            shave off that little bit of extra distance. I see
+                            you with that hypotenuse
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2023-12-16">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:30 PM"
+                            data-upvotes="1.2K" data-comments="2">
+                            Why should I be surprised your sister got in ED your
+                            last name is litterally Kasper Multipurpose Room
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-03-16">
+                        <div class="note-card">
+                            <p>Brown's men's basketball team pulled off a <a
+                                    href="https://www.browndailyherald.com/article/2024/03/one-win-away-from-march-madness-men-s-basketball-shocks-princeton-in-90-81-win"
+                                    target="_blank">shocking upset</a> over #1
+                                seeded Princeton, advancing to the Ivy Madness
+                                final (which they would later <a
+                                    href="https://www.browndailyherald.com/article/2024/03/brutal-buzzer-beater-keeps-brown-from-march-madness"
+                                    target="_blank">lose to Yale</a> on a
+                                buzzer-beater.)</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="1:10 PM"
+                            data-upvotes="435" data-comments="0">
+                            WE ARE A BASKETBALL SCHOOL
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-04-05">
+                        <div class="note-card">
+                            <p>Students were <a
+                                    href="https://www.browndailyherald.com/article/2024/04/bca-faces-backlash-for-spring-weekend-lineup-selection-poster-design"
+                                    target="_blank">less than pleased</a> with
+                                the 2024 Spring Weekend lineup.</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:05 AM"
+                            data-upvotes="887" data-comments="5">
+                            girl who?
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:52 AM"
+                            data-upvotes="572" data-comments="1">
+                            After such an atrocious lineup I am formally
+                            requesting the UFB audit the BCA because I feel like
+                            some of my tuition dollars may have been spent on
+                            DoorDash
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-04-21">
+                        <div class="note-card">
+                            <p>The concert itself wasn't received much
+                                better:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:54 PM"
+                            data-upvotes="641" data-comments="1">
+                            there was way better turn out for the eclipse and we
+                            had classes that day
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-04-24">
+                        <div class="note-card">
+                            <p>On April 24th, students set up an encampment on
+                                the Main Green to <a
+                                    href="https://www.browndailyherald.com/article/2024/04/around-eighty-students-begin-indefinite-encampment-on-main-green-in-support-of-divestment"
+                                    target="_blank">protest for
+                                    divestment</a>.</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:41 AM"
+                            data-upvotes="480" data-comments="4">
+                            Wake up babe, THERES AN ENCAMPMENT
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="10:53 AM"
+                            data-upvotes="200" data-comments="2">
+                            Ok but why does everyone just have tents ready at a
+                            moments notice. Like is that a standard thing to
+                            bring to college?
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-05-13">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:41 PM"
+                            data-upvotes="489" data-comments="1">
+                            Walking out of the orgo exam knowing that an
+                            alcohol is what I’m gonna be drinking after it,
+                            I’m alkene on dropping out, and I’m alkynes of
+                            screwed
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-09-15">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:17 PM"
+                            data-upvotes="429" data-comments="53">
+                            I lost my necklace at KASA last night I’d be
+                            very grateful and pay you a fortune if you found
+                            it. It’s a special item for me plss It’s
+                            Serpenti Viper Necklace from Bvlgari
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-09-16">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="1:05 AM"
+                            data-upvotes="254" data-comments="0">
+                            Find love? I’m tryna find that mf necklace
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="9:12 AM"
+                            data-upvotes="777" data-comments="3">
+                            if i found the necklace i wouldn’t tell anyone
+                            but there would be signs
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-09-28">
+                        <div class="note-card">
+                            <p>After a 12-game losing streak, Brown football
+                                finally <a
+                                    href="https://www.browndailyherald.com/article/2024/09/for-the-first-time-in-14-years-brown-football-defeats-harvard"
+                                    target="_blank">defeated Harvard</a> by
+                                completing an incredible comeback with a
+                                27-yard touchdown pass.</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:14 PM"
+                            data-upvotes="1.5K" data-comments="5">
+                            Brown: 31, Harvard: 28 Fuck Harvard
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:16 PM"
+                            data-upvotes="1K" data-comments="0">
+                            Maybe they deserve to cut me in the Andrews
+                            burrito bowl line
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:17 PM"
+                            data-upvotes="1.5K" data-comments="3">
+                            Never leaving a sporting event early again
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-11-06">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="11:34 PM"
+                            data-upvotes="447" data-comments="0">
+                            i wonder whether there’s someone in campus who
+                            hasn’t yet heard the outcome of the election
+                            surely there’s, like, an engineering student
+                            who’s been locked in b&h for the last 30 hours
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-11-11">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:53 PM"
+                            data-upvotes="732" data-comments="0">
+                            NO WAY JOJO SIWA JUST DID THE KARMA DANCE ON THE
+                            SAME STAGE I HAVE GENETICS
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-12-06">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:06 AM"
+                            data-upvotes="557" data-comments="5">
+                            Sidechat Fall 2024 Wrapped: Brown 31-28 Harvard Chem
+                            330 midterm Northern lights Chem 330 midterm Jojo
+                            siwa
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2024-12-11">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="2:14 PM"
+                            data-upvotes="927" data-comments="6">
+                            Somewhere there’s an archbron basement freshmen
+                            nervously pacing their room watching the water level
+                            rise and I think that’s so special ❤️
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-02-03">
+                        <div class="note-card">
+                            <p>The <a
+                                    href="https://www.browndailyherald.com/article/2025/02/the-brown-marriage-pact-how-brown-students-are-trying-to-find-love"
+                                    target="_blank">Marriage Pact</a> arrived at
+                                Brown and caused a stir:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="5:53 PM"
+                            data-upvotes="261" data-comments="0">
+                            i was supposed to meet the love of my life 53
+                            minutes ago what the hell is going on
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:05 PM"
+                            data-upvotes="850" data-comments="6">
+                            Guys who signed up cpax 🥲
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-02-10">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:05 PM"
+                            data-upvotes="1K" data-comments="1">
+                            “Brown will fix the world that Harvard broke”
+                            -Andrew Yang
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-03-17">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="10:49 AM"
+                            data-upvotes="723" data-comments="2">
+                            A MEAL WITH A MILKSHAKE???!!! UCS PAT YOURSELF ON
+                            THE BACK GIRL
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-04-03">
+                        <div class="note-card">
+                            <p>On April 3rd, the federal government <a
+                                    href="https://www.browndailyherald.com/article/2025/04/trump-administration-set-to-freeze-510-million-of-browns-federal-funding-nyt-reports"
+                                    target="_blank">froze $510 million of
+                                    funding</a> for Brown:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:25 PM"
+                            data-upvotes="783" data-comments="4">
+                            NO MORE FUNDING AHHHHHHHHH FUUUUUUUUCKKKKK
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:37 PM"
+                            data-upvotes="907" data-comments="2">
+                            guys i think if we band together and find the
+                            bvlgari serpenti necklace we can get back that money
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-04-23">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="2:09 PM"
+                            data-upvotes="1.4K" data-comments="2">
+                            at brown university they do not let you eat meat or
+                            salad… there is only ice cream for food
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-04-26">
+                        <div class="note-card">
+                            <p>2025 spring weekend was largely a hit:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:37 PM"
+                            data-upvotes="1K" data-comments="1">
+                            Offset went crazy
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="2:32 PM"
+                            data-upvotes="648" data-comments="1">
+                            so my ta just twerked on me
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-08-27">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="1:08 PM"
+                            data-upvotes="802" data-comments="19">
+                            BROWN UNIVERSITY PERFORMATIVE MALE COMPETITION 09/03
+                            FDOC. 12 PM MAIN GREEN NEXT WEEK. BE THERE.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-09-27">
+                        <div class="note-card">
+                            <p>Brown football failed to follow up their epic
+                                2024 win against Harvard, giving up a pick-six
+                                on the first
+                                play of the game and eventually <a
+                                    href="https://www.browndailyherald.com/article/2025/09/pick-season-football-embarrassed-by-harvard-in-41-7-blowout"
+                                    target="_blank">losing 41-7</a>:</p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:01 PM"
+                            data-upvotes="1.8K" data-comments="2">
+                            Football team chose to S/NC this game too apparently
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="9:58 PM"
+                            data-upvotes="900" data-comments="2">
+                            we should confiscate the scooters until the football
+                            team wins again
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-11-19">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:09 PM"
+                            data-upvotes="1K" data-comments="7">
+                            Texts are dry. Midterms were hard. Bed is empty. I’m
+                            gonna throw a mango at the next couple I see holding
+                            hands
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:14 PM"
+                            data-upvotes="1.1K" data-comments="11">
+                            To whoever just threw a mango at me and my
+                            boyfriend, fuck you. It wasn’t funny. I hope you
+                            stay miserable
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-12-13">
+                        <div class="note-card">
+                            <p>During and after the December 13th shooting,
+                                students relied on Sidechat for vital
+                                information. Someone posted about the shooting
+                                at 4:06 PM, just one minute after the first 911
+                                call. A user posted a more specific warning at
+                                4:10 PM. Brown sent out the first emergency
+                                alert at 4:22 PM.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:06 PM"
+                            data-upvotes="446" data-comments="4">
+                            Why are people running away from B&H?
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:10 PM"
+                            data-upvotes="3.4K" data-comments="18">
+                            STAY AWAY FROM THAYER STREET NEAR MACMILLAN
+                            2 PEOPLE
+                            JUST GOT SHOT IM BEING DEAD SERIOUS
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2025-12-13">
+                        <div class="note-card">
+                            <p>In the following hours and days, Sidechat became
+                                a
+                                place
+                                for students to support each other,
+                                share updates, and mourn.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="9:52 PM"
+                            data-upvotes="3.5K" data-comments="5">
+                            huge shoutout to all the incredible ratty staff who
+                            have been taking care of a hundred students for the
+                            past 5 hours, keeping us fed and safe, when they
+                            must be just as scared
+                        </div>
+                    </div>
+                    <div class="day-note" data-day="2025-12-14">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:25 PM"
+                            data-upvotes="4K" data-comments="1">
+                            Every student should walk through those gates twice.
+                            May their souls rest in peace 🕊️💐
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-01-18">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:37 PM"
+                            data-upvotes="902" data-comments="0">
+                            I got back to campus yesterday and this morning it
+                            snowed. There’s something special about my last and
+                            first day here having snowfall. Here’s to
+                            remembering, healing, and new beginnings this
+                            semester.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-02-23">
+                        <div class="note-card">
+                            <p>Over three February days, <a
+                                    href="https://www.browndailyherald.com/article/2026/02/record-breaking-blizzard-brings-over-379-inches-of-snow-to-providence"
+                                    target="_blank">37.9 inches of snow</a> fell
+                                in the largest snowstorm in Rhode Island
+                                recorded history. In-person classes were
+                                cancelled for two days.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="1:22 PM"
+                            data-upvotes="852" data-comments="4">
+                            NO CLASS ON TUESDAY
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:31 PM"
+                            data-upvotes="1.3K" data-comments="17">
+                            Ski jump on campus!!!
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="11:47 PM"
+                            data-upvotes="837" data-comments="0">
+                            “Is-“ No, it’s not open.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-02-25">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="11:52 AM"
+                            data-upvotes="1.3K" data-comments="0">
+                            Back in my day we walked through 3 feet of snow just
+                            to be rationed a single slice of Ratty pizza during
+                            the great blizzard. Be grateful for what you have
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-03-21">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="10:31 AM"
+                            data-upvotes="1.1K" data-comments="14">
+                            Wait i’m actually so stupid. I’ve been seeing posts
+                            about tf green and thought it was like main green
+                            and quiet green. i was like what is “the fuck green”
+                            like i thought it was a niche spot on campus.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-03-30">
+                        <div class="note-card">
+                            <p>Students banded together to compete in March
+                                Yakness, a Sidechat game pitting schools against
+                                each other. Brown was eliminated despite a
+                                strong effort against UCSB in the elite 8. Brown
+                                did manage to score the most overall points to
+                                <a
+                                    href="https://www.browndailyherald.com/article/2026/04/brown-wins-march-yakness-campus-cup-on-yik-yak-reaches-elite-eight-in-national-tournament"
+                                    target="_blank">win the Campus Cup</a>.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="8:43 AM"
+                            data-upvotes="460" data-comments="4">
+                            BLUE ROOM. 11AM. WE YAK TOGETHER FOR 2 HOURS. BE
+                            THERE.
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="1:33 PM"
+                            data-upvotes="596" data-comments="3">
+                            No need to assign blame. We lost. The only thing
+                            left to find out is when the mods graduated from
+                            UCSB
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-04-03">
+                        <div class="note-card">
+                            <p>Another year, another spring weekend controversy.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:13 AM"
+                            data-upvotes="1K" data-comments="7">
+                            i love thee sacred souls but baby that’s coffee shop
+                            music that’s not spring weekend
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:44 AM"
+                            data-upvotes="584" data-comments="1">
+                            this is a Perkins type lineup did brown get the last
+                            concert timeslot
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-04-26">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:21 PM"
+                            data-upvotes="1.8K" data-comments="12">
+                            My demands for dining at brown next year: 1: Make
+                            the Andrew’s door heavier (ABSOLUTE MUST) 2: Limit
+                            Ivy room hours, it’s just too convenient as it is 3:
+                            Close more dining halls on the weekends, I get
+                            overwhelmed with options 4: Tofu scramble served
+                            24/7
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-05-05">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="6:25 PM"
+                            data-upvotes="1.1K" data-comments="2">
+                            Beginning with the upcoming academic year, brown
+                            will not provide trees or grass as a standard
+                            amenity. You may travel to public parks or rent
+                            trees.
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-05-07">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="4:05 PM"
+                            data-upvotes="1.2K" data-comments="10">
+                            Bro... Canvas is like hacked hacked...
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-05-14">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="7:51 AM"
+                            data-upvotes="1.1K" data-comments="1">
+                            Just finished my last paper and am officially done
+                            with undergrad! Thanks Brown for a wonderful four
+                            years 🥲!
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-08-03">
+                        <div class="note-card">
+                            <p>On August 3rd, President Christina Paxson
+                                announced she would <a
+                                    href="https://www.browndailyherald.com/article/2026/08/paxson-to-step-down-at-end-of-2026-27-academic-year"
+                                    target="_blank">step down</a> after the
+                                2026-27 academic year.
+                            </p>
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="11:47 AM"
+                            data-upvotes="295" data-comments="3">
+                            Christina Paxson, you have served our university
+                            well. Although many say you weren’t perfect, you
+                            took us through the worst of times and more. Thank
+                            you for all that you have done. Let’s have one more
+                            great year together.
+                        </div>
+                        <div class="sc-post" data-user="Brown"
+                            data-time="12:05 PM"
+                            data-upvotes="78" data-comments="0">
+                            The search for the new Brown Avatar is underway
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-08-07">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:40 PM"
+                            data-upvotes="191" data-comments="2">
+                            yo we gotta gatekeep tf out of the gork this year
+                        </div>
+                    </div>
+
+                    <div class="day-note" data-day="2026-08-31">
+                        <div class="sc-post" data-user="Brown"
+                            data-time="3:23 PM"
+                            data-upvotes="1K" data-comments="7">
+                            NOTICE TO ALL FRESHMEN: step on the pembroke seal
+                            (the steps near vdub) for straight As and
+                            GENERATIONAL WEALTH ‼️‼️‼️
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 10vh;"></div>
+
+        <div class="data-box">
+            <iframe title="Average upvotes by time of day posted"
+                aria-label="Column Chart" id="datawrapper-chart-nvvbC"
+                src="https://datawrapper.dwcdn.net/nvvbC" scrolling="no"
+                frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;"
+                height="443" data-external="1"></iframe><script
+                type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+        </div>
+
+        <div style="height:10vh"></div>
+
+        <div class="data-box">
+            <iframe title="Average sentiment over the week"
+                aria-label="Column Chart" id="datawrapper-chart-Ktlbi"
+                src="https://datawrapper.dwcdn.net/Ktlbi" scrolling="no"
+                frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;"
+                height="437" data-external="1"></iframe><script
+                type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+        </div>
+
+        <div style="height:10vh"></div>
+
+        <div class="data-box">
+            <iframe title="How to go Sidechat viral" aria-label="Bar Chart"
+                id="datawrapper-chart-yFlPM"
+                src="https://datawrapper.dwcdn.net/yFlPM" scrolling="no"
+                frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;"
+                height="286" data-external="1"></iframe><script
+                type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+        </div>
+
+        <div style="height:10vh"></div>
+
+        <div class="data-box" style="text-align: center;">
+            <img src="images/good_word_cloud.png" alt="word cloud">
+        </div>
+
+        <div style="height:10vh"></div>
+
+        <div class="data-box" id="methods" style="text-align: left;">
+            <h4>Methods:</h4>
+            The data for this project was last updated on September 7th, 2026.
+            Posts that were deleted by users before that date are not included.
+            All posts are anonymous and reproduced as posted. Sentiment
+            values were calculated with <a
+                href="https://www.nltk.org/howto/sentiment.html"
+                target="_blank">NLTK</a> and weighted by the number of upvotes
+            each post received. If you have any questions or concerns about this
+            project, please reach out to <a
+                href="mailto:caleb.ellenberg@gmail.com">caleb.ellenberg@gmail.com</a>.
+        </div>
+
+        <div style="height:20vh"></div>
+
+    </body>
+
+</html>
