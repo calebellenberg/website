@@ -196,6 +196,8 @@ addEventListener("DOMContentLoaded", () => {
                 if (axisEl.parentElement === chart) chart.parentElement.appendChild(axisEl);
                 stops.forEach((s) => {
                     s.el.style.top = "0px";
+                    s.el.classList.remove("is-on");
+                    bars[s.row].classList.remove("is-active");
                     s.f = clamp(rowY(s.row) + BAR_H / 2 - focus, 0, H - V);
                     s.P = V + s.el.offsetHeight;
                 });
