@@ -34,6 +34,12 @@
     color: inherit;
 }
 
+.projects-container > a:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc((100% - 24px) / 2);
+    justify-self: center;
+}
+
 .project-card .content {
     padding: 0 16px; /* Padding on the sides only */
     text-align: center; /* Center align text */
@@ -65,6 +71,12 @@
         grid-template-columns: 1fr; /* Single column layout for smaller screens */
         gap: 20px; /* Adjust gap for smaller screens */
         padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .projects-container > a:last-child:nth-child(odd) {
+        grid-column: auto;
+        width: 100%;
+        justify-self: stretch;
     }
 
     .project-card {
