@@ -20,6 +20,7 @@ main {
     width: 100%;
     flex-grow: 1;
     font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 #headshot-container {
@@ -46,7 +47,7 @@ main {
 }
 
 #bio {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
